@@ -3,1113 +3,394 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ved Patel — Computer Engineering | Linux, Docker & DevOps</title>
-  <meta name="description" content="Portfolio of Ved Patel. Computer Engineering student passionate about Linux administration, Docker containers, backend APIs, applied AI pipelines, and DevOps workflows.">
-  <meta name="keywords" content="Ved Patel, DevOps, Linux, Docker, Docker Compose, Python, PyTorch, FastAPI, Ollama, Mehsana, Ganpat University">
+  <title>Ved Patel — Computer Engineering | Linux, Docker &amp; DevOps</title>
+  <meta name="description" content="Portfolio of Ved Patel. Computer Engineering student at Ganpat University focusing on Linux systems, Docker containers, backend APIs, and applied AI.">
   <meta name="author" content="Ved Patel">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Ved Patel — Computer Engineering | Linux, Docker & DevOps">
-  <meta property="og:description" content="Explore my projects: Dockerized 5-service stacks, <100ms auto-assignment algorithms, and local Ollama ML pipelines.">
+  <meta property="og:title" content="Ved Patel — Computer Engineering">
+  <meta property="og:description" content="Linux administration, Docker containers, backend APIs, and offline applied AI pipelines.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/ved_avatar.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/ved_avatar.jpg">
-
-  <!-- Google Fonts: Inter & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- ==============================================================
-       NAVIGATION BAR
-       ============================================================== -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#" class="nav-brand">
-        <img src="assets/images/ved_avatar.jpg" alt="Ved Patel Logo" class="nav-brand-avatar">
-        <div class="nav-brand-text">
-          <span class="nav-brand-name">Ved Patel</span>
-          <span class="nav-brand-status">
-            <span class="status-indicator"></span> Open to DevOps &amp; Engineering Roles
-          </span>
-        </div>
-      </a>
+  <main class="page-container">
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">What I've Built</a></li>
-          <li><a href="#terminal" class="nav-link">Terminal</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Minimal Top Bar -->
+    <header class="site-nav">
+      <a href="#" class="site-logo">ved patel</a>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">about</a></li>
+        <li><a href="#projects" class="nav-link">projects</a></li>
+        <li><a href="#experience" class="nav-link">experience</a></li>
+        <li><a href="#skills" class="nav-link">skills</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
+        <li><button class="nav-resume-btn resume-trigger-btn">resume (pdf)</button></li>
+      </ul>
+    </header>
 
-      <div class="nav-actions">
-        <button class="audio-toggle-btn" id="audio-toggle-btn" title="Toggle UI Sound Effects">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path><path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-          <span>Muted</span>
-        </button>
+    <!-- Intro / Bio -->
+    <section class="intro-section" id="hero">
+      <h1 class="intro-name">Ved Patel</h1>
+      <p class="intro-bio">
+        Computer Engineering student at <strong>Ganpat University</strong> (CGPA 7.26). 
+        I focus on <strong>Linux systems administration</strong>, <strong>Docker container workflows</strong>, 
+        backend services in Node.js and Python, and deploying <strong>offline applied AI</strong> models with Ollama and PyTorch.
+      </p>
 
-        <button class="cmd-k-trigger" title="Command Palette">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <span>Search</span>
-          <span class="cmd-k-key">Ctrl+K</span>
-        </button>
-
-        <button class="btn btn-secondary btn-sm resume-trigger-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          Resume (PDF)
-        </button>
-
-        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <div class="intro-links">
+        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="intro-link">
+          github <span class="arrow">↗</span>
+        </a>
+        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener noreferrer" class="intro-link">
+          linkedin <span class="arrow">↗</span>
+        </a>
+        <a href="mailto:patelved5258@gmail.com" class="intro-link">
+          patelved5258@gmail.com
+        </a>
+        <button class="intro-link resume-trigger-btn" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:inherit; padding:0;">
+          resume.pdf <span class="arrow">↗</span>
         </button>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <!-- ==============================================================
-       HERO SECTION — NATURAL DEVELOPER INTRODUCTION
-       ============================================================== -->
-  <section class="hero-section" id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-pill">
-          <span class="status-indicator"></span>
-          <span>B.Tech Computer Engineering &bull; Ganpat University (CGPA 7.26)</span>
-        </div>
+    <!-- About Me -->
+    <section class="section" id="about">
+      <div class="section-label">about</div>
+      <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.75; margin-bottom:16px;">
+        I enjoy working close to the machine. During my internship at the <strong>Ganpat University IT Department</strong>, 
+        I worked on administering our <strong>Open edX LMS platform</strong>: managing the Ulmo release migration, 
+        configuring Micro-Frontends (MFEs), setting up SMTP relays, and writing Python scripts to automate bulk student onboarding.
+      </p>
+      <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.75;">
+        In my project work, I prefer building systems that run efficiently on local hardware without depending on third-party cloud APIs. 
+        For <strong>CareMind AI</strong>, I containerized a dual-engine architecture combining PyTorch classification with a locally hosted 
+        <strong>Ollama (Llama-3.1)</strong> model constrained by strict Pydantic schemas, ensuring patient symptom data stays 100% private.
+      </p>
+    </section>
 
-        <h1 class="hero-title">
-          Hi, I'm Ved Patel.<br>
-          I build <span class="hero-highlight">Linux systems, Docker containers</span>, and applied AI backends.
-        </h1>
+    <!-- Featured Projects -->
+    <section class="section" id="projects">
+      <div class="section-label">featured work</div>
+      
+      <div class="project-list">
 
-        <p class="hero-subtitle">
-          I'm a Computer Engineering student based in Mehsana, Gujarat. I enjoy working close to the machine: 
-          configuring <strong>Linux server environments</strong>, packaging multi-service backends into 
-          <strong>Docker Compose</strong>, automating repetitive workflows with <strong>Python and Bash</strong>, 
-          and deploying locally-hosted <strong>Ollama LLM models</strong> so user data stays private.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#projects" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-            See What I've Built
-          </a>
-
-          <button class="btn btn-secondary resume-trigger-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-            Resume (PDF)
-          </button>
-
-          <button class="btn btn-secondary" onclick="copyEmail()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            Copy Email
-          </button>
-
-          <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
-
-          <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="LinkedIn Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-        </div>
-
-        <!-- Real Stats Telemetry Strip -->
-        <div class="telemetry-strip">
-          <div class="telemetry-item">
-            <div class="telemetry-label">OPEN SOURCE LABS</div>
-            <div class="telemetry-value" id="github-live-stat">12<span>repos</span></div>
-            <div class="telemetry-context">github.com/patelved546513546</div>
+        <!-- Project 1: CareMind AI -->
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-title">CareMind AI &mdash; Clinical Decision Platform</h3>
+            <span class="project-year">2026</span>
           </div>
-
-          <div class="telemetry-item">
-            <div class="telemetry-label">DOCKER CONTAINER STACK</div>
-            <div class="telemetry-value">5<span>srv</span></div>
-            <div class="telemetry-context">FastAPI, Ollama, Express, Prom, Grafana</div>
-          </div>
-
-          <div class="telemetry-item">
-            <div class="telemetry-label">INTERNSHIP EXPERIENCE</div>
-            <div class="telemetry-value">3<span>roles</span></div>
-            <div class="telemetry-context">Ganpat Univ (Open edX), VOIS, IBM</div>
-          </div>
-
-          <div class="telemetry-item">
-            <div class="telemetry-label">ACADEMIC RECORD</div>
-            <div class="telemetry-value">7.26<span>CGPA</span></div>
-            <div class="telemetry-context">B.Tech in Computer Engineering</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       ABOUT ME — CANDID HUMAN CONTEXT
-       ============================================================== -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">About Me</div>
-        <h2 class="section-title">What I Actually Do Every Day</h2>
-      </div>
-
-      <div class="bento-grid">
-        <div class="bento-col-6 bento-card spotlight-card">
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--text-primary);">The Systems &amp; DevOps Side</h3>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
-            I run Linux daily and prefer working directly in the shell. During my internship at 
-            <strong>Ganpat University IT Department</strong>, I worked on administering our 
-            <strong>Open edX LMS platform</strong>: managing the Ulmo release migration, configuring Micro-Frontends (MFEs), 
-            and setting up SMTP mail relays. I wrote custom Python scripts to automate bulk student onboarding and course 
-            enrollment so the staff didn't have to manually input hundreds of student accounts.
+          <p class="project-desc">
+            An offline clinical decision support system combining a PyTorch multi-label disease classifier with a locally hosted Ollama (Llama-3.1) model. 
+            Structured with Pydantic JSON schemas to prevent hallucinations, running across 5 microservices in Docker Compose with Prometheus and Grafana telemetry.
           </p>
-          <div class="card-callout">
-            <strong>Key Focus:</strong> Docker Compose, Linux systemd services, automated shell scripts, networking fundamentals, and server hardening.
+          <div class="project-meta">
+            <span class="project-tech">Docker Compose &bull; FastAPI &bull; PyTorch &bull; Ollama &bull; Prometheus</span>
+            <div class="project-actions">
+              <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
+              <button class="accordion-toggle" data-target="code-caremind">inspect code &darr;</button>
+            </div>
           </div>
-        </div>
 
-        <div class="bento-col-6 bento-card spotlight-card">
-          <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--text-primary);">The Applied AI &amp; Backend Side</h3>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px;">
-            Instead of just building simple wrappers around paid APIs, I like understanding how models execute on actual hardware. 
-            In my project <strong>CareMind AI</strong>, I combined a PyTorch multi-label classifier for symptom scoring with a 
-            <strong>locally hosted Ollama (Llama-3.1)</strong> model constrained by strict Pydantic schemas. That way, patient medical 
-            records never leave the local container, and the system runs smoothly even on CPU with zero cloud API bills.
+          <div class="code-drawer" id="code-caremind">
+            <div class="code-drawer-header">
+              <span>docker-compose.yml (5-Service Architecture)</span>
+              <button class="code-copy-btn">copy</button>
+            </div>
+            <pre><code>version: '3.8'
+services:
+  caremind-api:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      - OLLAMA_HOST=http://caremind-ollama:11434
+      - MODEL_PATH=/models/multilabel_classifier.pt
+    depends_on: [caremind-ollama]
+
+  caremind-ollama:
+    image: ollama/ollama:latest
+    volumes: [ollama_data:/root/.ollama]
+    ports: ["11434:11434"]
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes: [./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml]
+    ports: ["9090:9090"]
+
+  grafana:
+    image: grafana/grafana:latest
+    ports: ["3000:3000"]
+    depends_on: [prometheus]
+
+volumes:
+  ollama_data:</code></pre>
+          </div>
+        </article>
+
+        <!-- Project 2: TechResque -->
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-title">TechResque &mdash; Service Auto-Assignment Platform</h3>
+            <span class="project-year">2025</span>
+          </div>
+          <p class="project-desc">
+            On-demand service booking engine featuring sub-100ms algorithmic provider auto-assignment. 
+            Filters certified technicians by specialty and active job queue, applies uniform load distribution, and pushes WebSocket alerts within 5 seconds.
           </p>
-          <div class="card-callout">
-            <strong>Key Focus:</strong> FastAPI microservices, locally hosted LLMs via Ollama, PyTorch classification, Scikit-Learn regression, and MongoDB/SQL backends.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       FEATURED PROJECTS — BENTO TELEMETRY GRID & MULTI-FILE CODE TABS
-       ============================================================== -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Featured Work</div>
-        <h2 class="section-title">Real Projects I've Designed &amp; Coded</h2>
-        <p class="section-desc">
-          Here is a breakdown of the problems I set out to solve, the architecture decisions I made, 
-          and the actual code that runs them. Switch between file tabs and copy code directly.
-        </p>
-      </div>
-
-      <div class="bento-grid">
-
-        <!-- PROJECT 1: CAREMIND AI (FLAGSHIP - FULL 12 COLS) -->
-        <div class="bento-col-12 bento-card spotlight-card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
-            <div>
-              <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
-                <span class="badge badge-cyan">FLAGSHIP AI &amp; SYSTEMS</span>
-                <span class="badge badge-emerald">5-Service Docker Stack</span>
-                <span class="badge badge-violet">Local Ollama LLM</span>
-              </div>
-              <h3 style="font-size: 1.65rem; font-weight:800; letter-spacing: -0.02em;">CareMind AI — Clinical Decision Support Platform</h3>
-              <p style="font-size: 0.94rem; color: var(--text-secondary); max-width: 850px;">
-                A multi-modal offline clinical intelligence platform that pairs a PyTorch neural classifier with a locally hosted Ollama Llama-3.1 model constrained by Pydantic schemas for patient report synthesis.
-              </p>
-            </div>
-            <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub Repository
-            </a>
-          </div>
-
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-            <div>
-              <h4 style="font-size:0.86rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px; letter-spacing:0.05em;">The Engineering Problem</h4>
-              <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
-                Sending patient symptom logs and OCR blood work to cloud APIs creates major HIPAA/data-privacy liabilities. Furthermore, generic LLMs frequently hallucinate unstructured diagnoses that cannot be validated against lab reference intervals.
-              </p>
-            </div>
-            <div>
-              <h4 style="font-size:0.86rem; text-transform:uppercase; color:var(--text-muted); margin-bottom:6px; letter-spacing:0.05em;">My Architectural Solution</h4>
-              <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
-                Engineered a <strong>dual-engine local pipeline</strong>: PyTorch computes exact condition probability vectors on CPU, while local Ollama Llama-3.1 generates summaries strictly validated by Pydantic. Containerized all 5 microservices in Docker Compose with Prometheus metrics.
-              </p>
+          <div class="project-meta">
+            <span class="project-tech">Node.js &bull; Express &bull; MongoDB &bull; WebSockets &bull; &lt;84ms latency</span>
+            <div class="project-actions">
+              <a href="https://github.com/patelved546513546/TECHRESQUE" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
+              <button class="accordion-toggle" data-target="code-techresque">inspect code &darr;</button>
             </div>
           </div>
 
-          <!-- Multi-File Code Tabs Viewer -->
-          <div class="code-window code-file-viewer">
-            <div class="file-tabs-bar">
-              <div class="file-tabs-list">
-                <button class="file-tab-btn active" data-tab="cm-docker">docker-compose.yml</button>
-                <button class="file-tab-btn" data-tab="cm-infer">app/inference.py</button>
-                <button class="file-tab-btn" data-tab="cm-prom">prometheus.yml</button>
-                <button class="file-tab-btn" data-tab="cm-arch">Architecture Flow</button>
-              </div>
-              <button class="copy-code-btn" title="Copy active code">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy Code</span>
-              </button>
+          <div class="code-drawer" id="code-techresque">
+            <div class="code-drawer-header">
+              <span>backend/controllers/dispatchController.js</span>
+              <button class="code-copy-btn">copy</button>
             </div>
-
-            <!-- Tab 1: Docker Compose -->
-            <div class="file-tab-pane active" data-tab="cm-docker">
-              <pre class="code-pre"><code><span class="kw">version:</span> <span class="str">'3.8'</span>
-<span class="kw">services:</span>
-  <span class="fn">caremind-api:</span>
-    <span class="kw">build:</span> ./backend
-    <span class="kw">ports:</span> [<span class="str">"8000:8000"</span>]
-    <span class="kw">environment:</span>
-      - <span class="val">OLLAMA_HOST=http://caremind-ollama:11434</span>
-      - <span class="val">MODEL_WEIGHTS=/models/multilabel_v2.pt</span>
-    <span class="kw">depends_on:</span> [caremind-ollama]
-    <span class="kw">networks:</span> [caremind-mesh]
-
-  <span class="fn">caremind-ollama:</span>
-    <span class="kw">image:</span> ollama/ollama:latest
-    <span class="kw">volumes:</span> [ollama_data:/root/.ollama]
-    <span class="kw">ports:</span> [<span class="str">"11434:11434"</span>]
-    <span class="kw">networks:</span> [caremind-mesh]
-
-  <span class="fn">prometheus:</span>
-    <span class="kw">image:</span> prom/prometheus:latest
-    <span class="kw">volumes:</span> [./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml]
-    <span class="kw">ports:</span> [<span class="str">"9090:9090"</span>]
-    <span class="kw">networks:</span> [caremind-mesh]
-
-  <span class="fn">grafana:</span>
-    <span class="kw">image:</span> grafana/grafana:latest
-    <span class="kw">ports:</span> [<span class="str">"3000:3000"</span>]
-    <span class="kw">depends_on:</span> [prometheus]
-    <span class="kw">networks:</span> [caremind-mesh]
-
-<span class="kw">networks:</span>
-  <span class="fn">caremind-mesh:</span>
-    <span class="kw">driver:</span> bridge
-<span class="kw">volumes:</span>
-  <span class="fn">ollama_data:</span></code></pre>
-            </div>
-
-            <!-- Tab 2: Inference.py -->
-            <div class="file-tab-pane" data-tab="cm-infer">
-              <pre class="code-pre"><code><span class="kw">import</span> torch
-<span class="kw">from</span> fastapi <span class="kw">import</span> FastAPI, HTTPException
-<span class="kw">from</span> pydantic <span class="kw">import</span> BaseModel
-<span class="kw">import</span> httpx
-
-app = FastAPI(title=<span class="str">"CareMind Clinical Inference Engine"</span>)
-
-<span class="comment"># Load compiled PyTorch Multi-Label weights (CPU optimized)</span>
-model = torch.jit.load(<span class="str">"models/caremind_classifier_cpu.pt"</span>)
-model.eval()
-
-<span class="kw">class</span> <span class="fn">PatientPayload</span>(BaseModel):
-    symptom_vector: list[float]  <span class="comment"># 48-dim normalized embedding</span>
-    pain_coordinates: list[int]
-    reported_text: str
-
-<span class="fn">@app.post</span>(<span class="str">"/v1/diagnose"</span>)
-<span class="kw">async def</span> <span class="fn">evaluate_patient</span>(payload: PatientPayload):
-    <span class="kw">with</span> torch.no_grad():
-        x = torch.tensor([payload.symptom_vector], dtype=torch.float32)
-        logits = model(x)
-        probabilities = torch.sigmoid(logits)[<span class="val">0</span>].tolist()
-
-    <span class="comment"># Local Ollama Llama-3.1 inference with circuit-breaker fallback</span>
-    <span class="kw">try</span>:
-        <span class="kw">async with</span> httpx.AsyncClient(timeout=<span class="val">3.5</span>) <span class="kw">as</span> client:
-            resp = <span class="kw">await</span> client.post(<span class="str">"http://caremind-ollama:11434/api/generate"</span>, json={
-                <span class="str">"model"</span>: <span class="str">"llama3.1:8b"</span>,
-                <span class="str">"prompt"</span>: f<span class="str">"Summarize symptoms: {payload.reported_text}"</span>,
-                <span class="str">"format"</span>: <span class="str">"json"</span>,
-                <span class="str">"stream"</span>: <span class="val">False</span>
-            })
-            clinical_summary = resp.json().get(<span class="str">"response"</span>)
-    <span class="kw">except</span> httpx.TimeoutException:
-        clinical_summary = <span class="str">"Ollama busy; deterministic rule-based output served."</span>
-
-    <span class="kw">return</span> {<span class="str">"condition_probs"</span>: probabilities, <span class="str">"clinical_summary"</span>: clinical_summary}</code></pre>
-            </div>
-
-            <!-- Tab 3: Prometheus -->
-            <div class="file-tab-pane" data-tab="cm-prom">
-              <pre class="code-pre"><code><span class="kw">global:</span>
-  <span class="kw">scrape_interval:</span> <span class="val">5s</span>
-  <span class="kw">evaluation_interval:</span> <span class="val">5s</span>
-
-<span class="kw">scrape_configs:</span>
-  - <span class="fn">job_name:</span> <span class="str">'caremind_inference_telemetry'</span>
-    <span class="kw">metrics_path:</span> <span class="str">'/metrics'</span>
-    <span class="kw">static_configs:</span>
-      - <span class="kw">targets:</span> [<span class="str">'caremind-api:8000'</span>]
-    <span class="kw">metric_relabel_configs:</span>
-      - <span class="kw">source_labels:</span> [__name__]
-        <span class="kw">regex:</span> <span class="str">'(inference_latency_seconds|queue_depth|memory_usage_bytes)'</span>
-        <span class="kw">action:</span> keep</code></pre>
-            </div>
-
-            <!-- Tab 4: Architecture Flow -->
-            <div class="file-tab-pane" data-tab="cm-arch">
-              <pre class="code-pre"><code><span class="comment">[Client / React MFE Frontends]</span>
-       │ (JSON: Pain Body-Map + OCR Blood Work + Symptoms)
-       ▼
-<span class="comment">[FastAPI Ingestion Gateway (Port 8000)]</span>
-   ┌───┴────────────────────────────────────────┐
-   ▼                                            ▼
-<span class="fn">[PyTorch Neural Net]</span>                    <span class="fn">[Ollama Llama-3.1 Engine]</span>
-• Multi-label condition probs           • Structured JSON clinical summary
-• 100% Offline execution               • Pydantic schema validation
-• Circuit-breaker timeout               • Privacy safe (zero cloud leak)
-   └───┬────────────────────────────────────────┘
-       ▼
-<span class="str">[Prometheus Exporter]</span> ──> <span class="val">[Grafana Dashboard Visuals (Port 3000)]</span></code></pre>
-            </div>
-          </div>
-
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            <span class="badge">Python</span>
-            <span class="badge">FastAPI</span>
-            <span class="badge">PyTorch</span>
-            <span class="badge">Ollama (Llama-3.1)</span>
-            <span class="badge">Docker Compose</span>
-            <span class="badge">Prometheus</span>
-            <span class="badge">Grafana</span>
-            <span class="badge">Circuit-Breaker Pattern</span>
-          </div>
-        </div>
-
-        <!-- PROJECT 2: TECHRESQUE (BENTO COL 7) -->
-        <div class="bento-col-7 bento-card spotlight-card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                <span class="badge badge-emerald">BACKEND &amp; ALGORITHMS</span>
-                <span class="badge badge-cyan">&lt;84ms Auto-Assign</span>
-              </div>
-              <h3 style="font-size: 1.38rem; font-weight:800;">TechResque — Instant Auto-Assignment Engine</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                On-demand booking platform with algorithmic provider dispatch and live status state transitions.
-              </p>
-            </div>
-            <a href="https://github.com/patelved546513546/TECHRESQUE" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub (1 Star)
-            </a>
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5;">
-              <strong>The Problem &amp; Solution:</strong> Home-service booking apps leave customers waiting while orders sit unassigned. I wrote an algorithmic dispatch engine in Express/Node.js querying eligible technicians by specialty and load, achieving verified auto-assignment latency &lt;84ms and &lt;5s WebSocket alerts.
-            </p>
-          </div>
-
-          <!-- Multi-File Code Tabs Viewer -->
-          <div class="code-window code-file-viewer">
-            <div class="file-tabs-bar">
-              <div class="file-tabs-list">
-                <button class="file-tab-btn active" data-tab="tr-dispatch">dispatchController.js</button>
-                <button class="file-tab-btn" data-tab="tr-order">OrderModel.js</button>
-                <button class="file-tab-btn" data-tab="tr-arch">Flow</button>
-              </div>
-              <button class="copy-code-btn" title="Copy code">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy Code</span>
-              </button>
-            </div>
-
-            <div class="file-tab-pane active" data-tab="tr-dispatch">
-              <pre class="code-pre"><code><span class="comment">// Match available provider by specialty with fair load leveling</span>
-<span class="kw">async function</span> <span class="fn">autoAssignProvider</span>(serviceType, orderId) {
-  <span class="kw">const</span> candidates = <span class="kw">await</span> Provider.find({
+            <pre><code>async function autoAssignProvider(serviceType, orderId) {
+  // Query certified technicians matching category and capacity
+  const candidates = await Provider.find({
     specialty: serviceType,
-    status: <span class="str">'available'</span>,
-    activeJobsCount: { <span class="val">$lt</span>: <span class="val">3</span> }
+    status: 'available',
+    activeJobsCount: { $lt: 3 }
   }).lean();
 
-  <span class="kw">if</span> (!candidates.length) <span class="kw">throw new</span> Error(<span class="str">'No available providers'</span>);
+  if (!candidates.length) throw new Error('No available technicians');
 
-  <span class="comment">// Fair uniform random selection among top eligible providers</span>
-  <span class="kw">const</span> chosen = candidates[Math.floor(Math.random() * candidates.length)];
-  
-  <span class="comment">// Atomic state change: requested -> assigned in &lt;100ms</span>
-  <span class="kw">await</span> Order.findByIdAndUpdate(orderId, { 
-    status: <span class="str">'assigned'</span>, 
+  // Fair uniform random selection among top eligible providers
+  const chosen = candidates[Math.floor(Math.random() * candidates.length)];
+
+  // Atomic state change: 'requested' -> 'assigned' in <100ms
+  await Order.findByIdAndUpdate(orderId, {
+    status: 'assigned',
     providerId: chosen._id,
-    assignedAt: <span class="kw">new</span> Date()
+    assignedAt: new Date()
   });
 
-  io.to(chosen._id.toString()).emit(<span class="str">'NEW_JOB_ALERT'</span>, { orderId });
-  <span class="kw">return</span> chosen;
+  io.to(chosen._id.toString()).emit('NEW_JOB_ALERT', { orderId });
+  return chosen;
 }</code></pre>
-            </div>
+          </div>
+        </article>
 
-            <div class="file-tab-pane" data-tab="tr-order">
-              <pre class="code-pre"><code><span class="kw">const</span> mongoose = <span class="fn">require</span>(<span class="str">'mongoose'</span>);
-
-<span class="kw">const</span> OrderSchema = <span class="kw">new</span> mongoose.Schema({
-  customerId: { <span class="kw">type</span>: mongoose.Schema.Types.ObjectId, <span class="kw">ref</span>: <span class="str">'User'</span> },
-  providerId: { <span class="kw">type</span>: mongoose.Schema.Types.ObjectId, <span class="kw">ref</span>: <span class="str">'Provider'</span> },
-  serviceCategory: { <span class="kw">type</span>: String, <span class="kw">required</span>: <span class="val">true</span> },
-  status: {
-    <span class="kw">type</span>: String,
-    <span class="kw">enum</span>: [<span class="str">'requested'</span>, <span class="str">'assigned'</span>, <span class="str">'in_progress'</span>, <span class="str">'completed'</span>],
-    <span class="kw">default</span>: <span class="str">'requested'</span>
-  }
-}, { timestamps: <span class="val">true</span> });
-
-module.exports = mongoose.model(<span class="str">'Order'</span>, OrderSchema);</code></pre>
-            </div>
-
-            <div class="file-tab-pane" data-tab="tr-arch">
-              <pre class="code-pre"><code><span class="comment">[Client Booking]</span> ──> <span class="fn">[POST /api/orders]</span>
-                          │
-                          ▼
-             <span class="comment">[Filter Available Techs (Jobs &lt; 3)]</span>
-                          │
-                          ▼
-             <span class="val">[Fair Uniform Random Match]</span>
-                          │
-                          ▼
-   <span class="str">[DB State 'assigned' (&lt;84ms)]</span> ──> <span class="kw">[WebSocket Alert (&lt;5s)]</span></code></pre>
+        <!-- Project 3: Predictive Microgrid -->
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-title">Predictive Solar + EV Microgrid Energy Dispatch</h3>
+            <span class="project-year">2025</span>
+          </div>
+          <p class="project-desc">
+            Net-load forecasting pipeline using Quantile Regression (P10/P50/P90) on Ausgrid 300-home solar load data and Open-Meteo weather APIs. 
+            Achieved a 90% RMSE reduction (20.75 down to 2.03) with a ~2.51% MAPE, driving a battery storage peak-shaving optimization schedule.
+          </p>
+          <div class="project-meta">
+            <span class="project-tech">Python &bull; Scikit-Learn &bull; Quantile Regression &bull; Streamlit</span>
+            <div class="project-actions">
+              <a href="https://github.com/patelved546513546/-microgrid-forecast-dispatch" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
+              <button class="accordion-toggle" data-target="code-microgrid">inspect code &darr;</button>
             </div>
           </div>
 
-          <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <span class="badge">Node.js</span>
-            <span class="badge">Express</span>
-            <span class="badge">MongoDB</span>
-            <span class="badge">WebSockets</span>
-            <span class="badge">State Machine</span>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: PREDICTIVE MICROGRID (BENTO COL 5) -->
-        <div class="bento-col-5 bento-card spotlight-card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                <span class="badge badge-amber">MACHINE LEARNING</span>
-                <span class="badge badge-emerald">90% RMSE Cut</span>
-              </div>
-              <h3 style="font-size: 1.38rem; font-weight:800;">Microgrid Quantile ML Dispatch</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                P10/P50/P90 net-load forecast on Ausgrid data with battery arbitrage logic.
-              </p>
+          <div class="code-drawer" id="code-microgrid">
+            <div class="code-drawer-header">
+              <span>src/train_quantile.py</span>
+              <button class="code-copy-btn">copy</button>
             </div>
-            <a href="https://github.com/patelved546513546/-microgrid-forecast-dispatch" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
+            <pre><code>from sklearn.linear_model import QuantileRegressor
 
-          <div style="margin-bottom:14px;">
-            <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5;">
-              <strong>The Problem &amp; Impact:</strong> Solar output swings create grid volatility. Trained Quantile Regressors (HiGHS solver) dropping baseline RMSE from 20.75 down to 2.03 (~90% cut) with ~2.51% MAPE.
-            </p>
-          </div>
-
-          <!-- Multi-File Code Tabs Viewer -->
-          <div class="code-window code-file-viewer">
-            <div class="file-tabs-bar">
-              <div class="file-tabs-list">
-                <button class="file-tab-btn active" data-tab="mg-quantile">train_quantile.py</button>
-                <button class="file-tab-btn" data-tab="mg-arbitrage">battery_opt.py</button>
-              </div>
-              <button class="copy-code-btn" title="Copy code">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy Code</span>
-              </button>
-            </div>
-
-            <div class="file-tab-pane active" data-tab="mg-quantile">
-              <pre class="code-pre"><code><span class="kw">from</span> sklearn.linear_model <span class="kw">import</span> QuantileRegressor
-
-quantiles = [<span class="val">0.10</span>, <span class="val">0.50</span>, <span class="val">0.90</span>]
+quantiles = [0.10, 0.50, 0.90]
 models = {}
 
-<span class="kw">for</span> q <span class="kw">in</span> quantiles:
-    model = QuantileRegressor(
-        quantile=q, alpha=<span class="val">0.01</span>, solver=<span class="str">'highs'</span>
-    )
+for q in quantiles:
+    model = QuantileRegressor(quantile=q, alpha=0.01, solver='highs')
     model.fit(X_train, y_train)
-    models[f<span class="str">"p{int(q*100)}"</span>] = model
+    models[f"p{int(q*100)}"] = model
 
-<span class="comment"># RMSE: 20.75 -> 2.03 (90% reduction)</span></code></pre>
-            </div>
-
-            <div class="file-tab-pane" data-tab="mg-arbitrage">
-              <pre class="code-pre"><code><span class="comment"># Battery Arbitrage Logic</span>
-<span class="kw">def</span> <span class="fn">dispatch_step</span>(net_load, tariff, soc):
-    <span class="kw">if</span> tariff > <span class="val">0.40</span> <span class="kw">and</span> soc > <span class="val">2.7</span>:
-        discharge = min(net_load, <span class="val">5.0</span>)
-        <span class="kw">return</span> <span class="str">"DISCHARGE"</span>, discharge
-    <span class="kw">elif</span> net_load < <span class="val">0</span>:
-        charge = min(abs(net_load), <span class="val">5.0</span>)
-        <span class="kw">return</span> <span class="str">"CHARGE"</span>, charge
-    <span class="kw">return</span> <span class="str">"IDLE"</span>, <span class="val">0.0</span></code></pre>
-            </div>
+# Baseline RMSE: 20.75 -> Final Model RMSE: 2.03 (90% reduction)</code></pre>
           </div>
+        </article>
 
-          <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <span class="badge">Python</span>
-            <span class="badge">Scikit-Learn</span>
-            <span class="badge">HiGHS Solver</span>
-            <span class="badge">Streamlit</span>
+        <!-- Project 4: DevSecOps SIEM Lab -->
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-title">Enterprise DevSecOps SIEM &amp; Threat Detection Lab</h3>
+            <span class="project-year">2025</span>
           </div>
-        </div>
-
-        <!-- PROJECT 4: DEVSECOPS SIEM (BENTO COL 6) -->
-        <div class="bento-col-6 bento-card spotlight-card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                <span class="badge badge-violet">SECURITY &amp; OBSERVABILITY</span>
-                <span class="badge badge-cyan">ELK + Kali Linux</span>
-              </div>
-              <h3 style="font-size: 1.38rem; font-weight:800;">DevSecOps SIEM &amp; Threat Detection Lab</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                Logstash Grok ingestion, SSH brute-force attack detection, and iptables defense on Kali Linux.
-              </p>
-            </div>
-            <a href="https://github.com/patelved546513546/cybersec-tools" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5;">
-              <strong>Architecture:</strong> Configured Logstash Grok patterns parsing failed SSH auth attempts into Elasticsearch, with Kibana attack geo-maps and automated iptables defense.
-            </p>
-          </div>
-
-          <!-- Multi-File Code Tabs Viewer -->
-          <div class="code-window code-file-viewer">
-            <div class="file-tabs-bar">
-              <div class="file-tabs-list">
-                <button class="file-tab-btn active" data-tab="cs-grok">ssh-auth.conf</button>
-                <button class="file-tab-btn" data-tab="cs-iptables">firewall_shield.sh</button>
-              </div>
-              <button class="copy-code-btn" title="Copy code">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy Code</span>
-              </button>
-            </div>
-
-            <div class="file-tab-pane active" data-tab="cs-grok">
-              <pre class="code-pre"><code><span class="kw">filter</span> {
-  <span class="fn">grok</span> {
-    <span class="kw">match</span> => { <span class="str">"message"</span> => <span class="str">"%{SYSLOGTIMESTAMP:ts} %{HOSTNAME:h} sshd\[%{POSINT:pid}\]: %{DATA:event} for %{USER:usr} from %{IP:src_ip}"</span> }
-  }
-  <span class="kw">if</span> [event] =~ <span class="str">"Failed password"</span> {
-    <span class="fn">mutate</span> { <span class="kw">add_tag</span> => [<span class="str">"ssh_brute_force"</span>] }
-  }
-}</code></pre>
-            </div>
-
-            <div class="file-tab-pane" data-tab="cs-iptables">
-              <pre class="code-pre"><code><span class="comment">#!/usr/bin/env bash</span>
-<span class="comment"># Auto-ban offending IPs from SIEM threshold</span>
-<span class="kw">for</span> IP <span class="kw">in</span> $ATTACKER_IPS; <span class="kw">do</span>
-  iptables -I INPUT 1 -s <span class="str">"$IP"</span> -j DROP
-  <span class="fn">echo</span> <span class="str">"[ALERT] Banned brute-force origin: $IP"</span>
-<span class="kw">done</span></code></pre>
-            </div>
-          </div>
-
-          <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <span class="badge">Logstash Grok</span>
-            <span class="badge">Elasticsearch</span>
-            <span class="badge">Kibana</span>
-            <span class="badge">Kali Linux</span>
-            <span class="badge">iptables</span>
-          </div>
-        </div>
-
-        <!-- PROJECT 5: GROQ AI NEWS BOT (BENTO COL 6) -->
-        <div class="bento-col-6 bento-card spotlight-card">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:14px;">
-            <div>
-              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                <span class="badge badge-cyan">AI WORKERS &amp; LLMS</span>
-                <span class="badge badge-emerald">Ultra-Low Latency</span>
-              </div>
-              <h3 style="font-size: 1.38rem; font-weight:800;">Automated News Bot with Groq Cloud AI</h3>
-              <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                RSS ingestion across BBC, Reuters, Reddit with Groq LLM synthesis and tri-channel dispatch.
-              </p>
-            </div>
-            <a href="https://github.com/patelved546513546/NEWS_BOT" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
-            </a>
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <p style="font-size:0.86rem; color:var(--text-secondary); line-height:1.5;">
-              <strong>Architecture:</strong> Python worker polling international RSS feeds every 15 mins, generating 2-sentence executive briefs via Groq API, broadcasting via SMTP, Telegram, and CallMeBot.
-            </p>
-          </div>
-
-          <!-- Multi-File Code Tabs Viewer -->
-          <div class="code-window code-file-viewer">
-            <div class="file-tabs-bar">
-              <div class="file-tabs-list">
-                <button class="file-tab-btn active" data-tab="nb-worker">aggregator.py</button>
-                <button class="file-tab-btn" data-tab="nb-dispatch">dispatcher.py</button>
-              </div>
-              <button class="copy-code-btn" title="Copy code">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy Code</span>
-              </button>
-            </div>
-
-            <div class="file-tab-pane active" data-tab="nb-worker">
-              <pre class="code-pre"><code><span class="kw">import</span> feedparser
-<span class="kw">from</span> groq <span class="kw">import</span> Groq
-
-client = Groq()
-
-<span class="kw">def</span> <span class="fn">summarize_feed</span>(feed_url):
-    feed = feedparser.parse(feed_url)
-    entry = feed.entries[<span class="val">0</span>]
-    
-    <span class="comment"># Groq low-latency Llama-3.1-70b inference</span>
-    res = client.chat.completions.create(
-        model=<span class="str">"llama-3.1-70b-versatile"</span>,
-        messages=[{<span class="str">"role"</span>: <span class="str">"user"</span>, <span class="str">"content"</span>: f<span class="str">"2-sentence brief: {entry.summary}"</span>}]
-    )
-    <span class="kw">return</span> res.choices[<span class="val">0</span>].message.content</code></pre>
-            </div>
-
-            <div class="file-tab-pane" data-tab="nb-dispatch">
-              <pre class="code-pre"><code><span class="kw">import</span> requests
-
-<span class="kw">def</span> <span class="fn">dispatch_telegram</span>(text, chat_id):
-    requests.post(f<span class="str">"https://api.telegram.org/bot{TOKEN}/sendMessage"</span>, json={
-        <span class="str">"chat_id"</span>: chat_id,
-        <span class="str">"text"</span>: text,
-        <span class="str">"parse_mode"</span>: <span class="str">"Markdown"</span>
-    })</code></pre>
-            </div>
-          </div>
-
-          <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <span class="badge">Python</span>
-            <span class="badge">Groq Cloud API</span>
-            <span class="badge">Telegram API</span>
-            <span class="badge">Feedparser</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       INTERACTIVE UNIX TERMINAL — AUTHENTIC DEVELOPER FEATURE
-       ============================================================== -->
-  <section class="section" id="terminal">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Interactive Shell</div>
-        <h2 class="section-title">Developer Terminal (Try It Live)</h2>
-        <p class="section-desc">
-          Prefer the command line? Type commands below to inspect my background, run simulated Docker commands, or view my resume.
-        </p>
-      </div>
-
-      <div class="terminal-container">
-        <div class="terminal-header">
-          <div class="window-dots">
-            <span class="window-dot red"></span>
-            <span class="window-dot yellow"></span>
-            <span class="window-dot green"></span>
-          </div>
-          <div class="terminal-title">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-            ved@server: ~ (bash)
-          </div>
-          <span class="badge badge-emerald" style="font-size:0.7rem; font-family:var(--font-mono);">ONLINE</span>
-        </div>
-
-        <div class="terminal-quick-pills">
-          <span style="font-size:0.75rem; color:var(--text-muted); align-self:center; font-family:var(--font-mono);">Quick run:</span>
-          <button class="term-pill-btn" data-cmd="whoami">whoami</button>
-          <button class="term-pill-btn" data-cmd="skills">skills</button>
-          <button class="term-pill-btn" data-cmd="docker ps">docker ps</button>
-          <button class="term-pill-btn" data-cmd="projects">projects</button>
-          <button class="term-pill-btn" data-cmd="experience">experience</button>
-          <button class="term-pill-btn" data-cmd="cat resume">cat resume</button>
-          <button class="term-pill-btn" data-cmd="contact">contact</button>
-          <button class="term-pill-btn" data-cmd="clear">clear</button>
-        </div>
-
-        <div class="terminal-body" onclick="document.getElementById('terminal-cli-input').focus()">
-          <div class="terminal-output" id="terminal-cli-output">Welcome to Ved Patel's systems shell.
-Type 'help' to see all available commands, or click any of the quick buttons above.</div>
-          <div class="terminal-input-row">
-            <span class="terminal-prompt">ved@server:~$</span>
-            <input type="text" id="terminal-cli-input" class="terminal-input" placeholder="type a command (e.g. docker ps, skills, whoami)..." autocomplete="off" spellcheck="false">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       INTERNSHIP EXPERIENCE
-       ============================================================== -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Career History</div>
-        <h2 class="section-title">Internships &amp; Practical Experience</h2>
-      </div>
-
-      <div class="timeline">
-        <!-- 1. Ganpat University Open edX -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Open edX LMS Administrator &amp; Frontend Developer Intern</h3>
-              <div class="timeline-org">Ganpat University — IT Department, Mehsana, Gujarat</div>
-            </div>
-            <span class="timeline-date">Feb 2026 &ndash; May 2026</span>
-          </div>
-          <ul class="timeline-points">
-            <li>Assisted in migrating the university's Open edX instance to the Ulmo release, configuring frontend themes, brand navigation, and Micro-Frontends (MFEs).</li>
-            <li>Wrote custom Python automation scripts to automate bulk student onboarding and course enrollment, reducing manual administrative entry.</li>
-            <li>Administered Linux-based hosting environments, configured production SMTP mail settings, and executed service restarts for system updates.</li>
-          </ul>
-        </div>
-
-        <!-- 2. Vodafone Idea VOIS -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Conversational Data Analysis with Large Language Models (LLMs)</h3>
-              <div class="timeline-org">Vodafone Idea (VOIS) &ndash; Edunet Foundation | AICTE Virtual Internship</div>
-            </div>
-            <span class="timeline-date">11 Sep 2025 &ndash; 08 Oct 2025</span>
-          </div>
-          <ul class="timeline-points">
-            <li>Analyzed conversational datasets using Large Language Models to evaluate automated decision support and classification pipelines.</li>
-            <li>Studied token efficiency, prompt structure, and latency trade-offs on real-world customer support interactions.</li>
-          </ul>
-        </div>
-
-        <!-- 3. IBM SkillsBuild -->
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Artificial Intelligence &amp; Cloud Technology Intern</h3>
-              <div class="timeline-org">IBM SkillsBuild &ndash; Edunet Foundation | AICTE Virtual Internship</div>
-            </div>
-            <span class="timeline-date">09 Sep 2025 &ndash; 07 Oct 2025</span>
-          </div>
-          <ul class="timeline-points">
-            <li>Completed a 4-week virtual curriculum covering AI model fundamentals and cloud-based computing workflows.</li>
-            <li>Learned practical deployment workflows for hosting and scaling model endpoints on cloud platforms.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       SKILLS & ARSENAL
-       ============================================================== -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Skills Matrix</div>
-        <h2 class="section-title">What I Work With</h2>
-      </div>
-
-      <div class="skills-quad-grid">
-        <div class="skill-pillar-card spotlight-card">
-          <div class="pillar-title">
-            <div class="pillar-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
-            </div>
-            <span>Systems &amp; DevOps</span>
-          </div>
-          <div class="skill-tags-group">
-            <span class="badge badge-cyan">Docker</span>
-            <span class="badge badge-cyan">Docker Compose</span>
-            <span class="badge">Linux Administration</span>
-            <span class="badge">Ubuntu / Debian Server</span>
-            <span class="badge">Bash Scripting</span>
-            <span class="badge">Networking (TCP/IP, DNS)</span>
-            <span class="badge">Open edX Administration</span>
-          </div>
-        </div>
-
-        <div class="skill-pillar-card spotlight-card">
-          <div class="pillar-title">
-            <div class="pillar-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </div>
-            <span>AI/ML &amp; Monitoring</span>
-          </div>
-          <div class="skill-tags-group">
-            <span class="badge badge-emerald">PyTorch</span>
-            <span class="badge badge-emerald">FastAPI</span>
-            <span class="badge">Ollama (Llama-3.1)</span>
-            <span class="badge">Prometheus</span>
-            <span class="badge">Grafana</span>
-            <span class="badge">Quantile Regression ML</span>
-            <span class="badge">Scikit-Learn</span>
-            <span class="badge">Streamlit</span>
-          </div>
-        </div>
-
-        <div class="skill-pillar-card spotlight-card">
-          <div class="pillar-title">
-            <div class="pillar-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-            </div>
-            <span>Backend &amp; Databases</span>
-          </div>
-          <div class="skill-tags-group">
-            <span class="badge badge-violet">Python Scripting</span>
-            <span class="badge badge-violet">Node.js</span>
-            <span class="badge">Express.js</span>
-            <span class="badge">MongoDB</span>
-            <span class="badge">SQL</span>
-            <span class="badge">REST APIs</span>
-            <span class="badge">WebSockets</span>
-            <span class="badge">JavaScript / HTML / CSS</span>
-          </div>
-        </div>
-
-        <div class="skill-pillar-card spotlight-card">
-          <div class="pillar-title">
-            <div class="pillar-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <span>Security &amp; Tools</span>
-          </div>
-          <div class="skill-tags-group">
-            <span class="badge badge-amber">Kali Linux</span>
-            <span class="badge badge-amber">Metasploit</span>
-            <span class="badge">Elasticsearch &amp; Logstash</span>
-            <span class="badge">Kibana</span>
-            <span class="badge">Git &amp; GitHub</span>
-            <span class="badge">VS Code</span>
-            <span class="badge">Linux CLI</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       EDUCATION & CERTIFICATIONS
-       ============================================================== -->
-  <section class="section" id="education">
-    <div class="container">
-      <div class="edu-cert-grid">
-        <div class="skill-pillar-card spotlight-card" style="display:flex; flex-direction:column; justify-content:space-between;">
-          <div>
-            <div class="pillar-title">
-              <div class="pillar-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
-              </div>
-              <span>Degree</span>
-            </div>
-            <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:4px;">B.Tech in Computer Engineering</h3>
-            <p style="font-size:0.92rem; color:var(--accent-cyan-light); margin-bottom:6px;">Ganpat University — U.V. Patel College of Engineering</p>
-            <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:14px;">Mehsana, Gujarat, India &bull; 2023 &ndash; Present</p>
-          </div>
-          <div style="padding:12px; background:rgba(255,255,255,0.03); border:1px solid var(--border-subtle); border-radius:var(--radius-md); display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-size:0.85rem; color:var(--text-secondary); font-weight:600;">Current CGPA</span>
-            <span class="badge badge-emerald" style="font-size:0.9rem; font-weight:700; font-family:var(--font-mono);">7.26 / 10</span>
-          </div>
-        </div>
-
-        <div class="skill-pillar-card spotlight-card">
-          <div class="pillar-title">
-            <div class="pillar-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-            </div>
-            <span>Certifications</span>
-          </div>
-
-          <div class="cert-list">
-            <div class="cert-item">
-              <div>
-                <div class="cert-issuer">Google</div>
-                <div class="cert-name">Google Cloud Cybersecurity Certificate</div>
-              </div>
-              <span class="badge badge-cyan">Certified</span>
-            </div>
-
-            <div class="cert-item">
-              <div>
-                <div class="cert-issuer">Cisco</div>
-                <div class="cert-name">Introduction to Cybersecurity</div>
-              </div>
-              <span class="badge badge-cyan">Certified</span>
-            </div>
-
-            <div class="cert-item">
-              <div>
-                <div class="cert-issuer">AICTE / Edunet Foundation</div>
-                <div class="cert-name">Conversational LLMs (VOIS) &amp; Cloud Tech (IBM)</div>
-              </div>
-              <span class="badge badge-emerald">Completed</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==============================================================
-       CONTACT SECTION
-       ============================================================== -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-card-hero">
-        <div class="contact-left">
-          <div class="section-tag" style="margin-bottom:8px;">Get in Touch</div>
-          <h2>Let's Talk About Engineering</h2>
-          <p style="font-size:0.98rem; color:var(--text-secondary); line-height:1.6; margin-bottom:20px;">
-            I'm currently looking for opportunities in <strong>DevOps, Cloud Infrastructure, Backend Engineering, or Applied AI</strong>. 
-            Feel free to reach out directly via email, phone, or LinkedIn!
+          <p class="project-desc">
+            Cybersecurity practice lab deploying an ELK stack (Elasticsearch, Logstash, Kibana) for Linux SSH brute-force attack detection. 
+            Configured Logstash Grok patterns for syslog ingestion and automated iptables firewall IP drop scripts on Kali Linux.
           </p>
-
-          <div class="contact-channels">
-            <div class="contact-row-item">
-              <div class="contact-row-label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                <span>patelved5258@gmail.com</span>
-              </div>
-              <button class="btn btn-sm btn-cyan" onclick="copyEmail()">Copy</button>
-            </div>
-
-            <div class="contact-row-item">
-              <div class="contact-row-label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <span>+91-7383544236</span>
-              </div>
-              <a href="tel:+917383544236" class="btn btn-sm btn-secondary">Call</a>
-            </div>
-
-            <div class="contact-row-item">
-              <div class="contact-row-label">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>Mehsana, Gujarat, India</span>
-              </div>
-              <span class="badge">Open to Relocation / Remote</span>
+          <div class="project-meta">
+            <span class="project-tech">Elasticsearch &bull; Logstash &bull; Kibana &bull; Kali Linux &bull; iptables</span>
+            <div class="project-actions">
+              <a href="https://github.com/patelved546513546/cybersec-tools" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="contact-right">
-          <form class="contact-form" id="quick-contact-form">
-            <h3 style="font-size:1.15rem; margin-bottom:4px;">Send a Direct Note</h3>
-            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:12px;">Opens your email client directly with this message</p>
-
-            <div class="form-group">
-              <label for="contact-name">Your Name</label>
-              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Hiring Manager / Tech Lead" required>
+        <!-- Project 5: News Bot -->
+        <article class="project-item">
+          <div class="project-header">
+            <h3 class="project-title">Automated Multi-Channel News Bot with Groq LLM</h3>
+            <span class="project-year">2025</span>
+          </div>
+          <p class="project-desc">
+            Automated news aggregation worker ingesting RSS feeds from international sources (BBC, Reuters, Reddit), synthesizing concise executive summaries via Groq Cloud LLM, and broadcasting alerts across Email SMTP, Telegram, and WhatsApp.
+          </p>
+          <div class="project-meta">
+            <span class="project-tech">Python &bull; Groq API &bull; Telegram Bot API &bull; SMTP</span>
+            <div class="project-actions">
+              <a href="https://github.com/patelved546513546/NEWS_BOT" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
             </div>
+          </div>
+        </article>
 
-            <div class="form-group">
-              <label for="contact-email">Your Email</label>
-              <input type="email" id="contact-email" name="email" class="form-input" placeholder="recruiter@company.com" required>
-            </div>
+      </div>
+    </section>
 
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Hi Ved, we'd like to talk to you about our DevOps / Backend role..." required></textarea>
-            </div>
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="section-label">experience</div>
 
-            <button type="submit" class="btn btn-primary" style="width:100%;">
-              ✉️ Send Email to Ved
-            </button>
-          </form>
+      <div class="experience-list">
+
+        <!-- Role 1 -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <h3 class="exp-role">Open edX LMS Administrator &amp; Frontend Developer Intern</h3>
+            <span class="exp-period">Feb 2026 &ndash; May 2026</span>
+          </div>
+          <div class="exp-company">Ganpat University &mdash; IT Department, Mehsana, Gujarat</div>
+          <ul class="exp-points">
+            <li>Assisted in migrating the university's Open edX instance to the Ulmo release, configuring frontend themes and Micro-Frontends (MFEs).</li>
+            <li>Wrote custom Python automation scripts to handle bulk student onboarding and course enrollment.</li>
+            <li>Administered Linux hosting environments, configured production SMTP mail settings, and managed service restarts for system updates.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <h3 class="exp-role">Conversational Data Analysis with Large Language Models (LLMs)</h3>
+            <span class="exp-period">Sep 2025 &ndash; Oct 2025</span>
+          </div>
+          <div class="exp-company">Vodafone Idea (VOIS) &ndash; Edunet Foundation | AICTE Virtual Internship</div>
+          <ul class="exp-points">
+            <li>Analyzed conversational datasets using LLMs to evaluate automated decision support and classification pipelines.</li>
+            <li>Studied token efficiency, prompt structure, and latency trade-offs on customer support interactions.</li>
+          </ul>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="exp-item">
+          <div class="exp-header">
+            <h3 class="exp-role">Artificial Intelligence &amp; Cloud Technology Intern</h3>
+            <span class="exp-period">Sep 2025 &ndash; Oct 2025</span>
+          </div>
+          <div class="exp-company">IBM SkillsBuild &ndash; Edunet Foundation | AICTE Virtual Internship</div>
+          <ul class="exp-points">
+            <li>Completed curriculum covering AI model fundamentals, containerization, and cloud computing deployment workflows.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills / Arsenal -->
+    <section class="section" id="skills">
+      <div class="section-label">skills &amp; tools</div>
+
+      <div class="skills-block">
+        <div class="skill-row">
+          <span class="skill-category">Systems &amp; DevOps</span>
+          <span class="skill-items">Docker, Docker Compose, Linux (Ubuntu, Debian), Bash, Networking (TCP/IP, DNS), Open edX Administration, systemd</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Backend &amp; Data</span>
+          <span class="skill-items">Python, Node.js, Express, FastAPI, MongoDB, SQL, REST APIs, WebSockets</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">AI &amp; Observability</span>
+          <span class="skill-items">PyTorch, Ollama (Llama-3.1), Scikit-Learn, Prometheus, Grafana, Streamlit, Groq API</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-category">Security &amp; Tooling</span>
+          <span class="skill-items">ELK Stack (Elasticsearch, Logstash, Kibana), Kali Linux, Metasploit, Nmap, Git, GitHub, VS Code</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==============================================================
-       FOOTER
-       ============================================================== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Ved Patel</strong> &bull; Computer Engineering Student &bull; Mehsana, Gujarat
-      </div>
-      <div style="display:flex; gap:16px;">
-        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="#" class="resume-trigger-btn">Resume (PDF)</a>
-      </div>
-    </div>
-  </footer>
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="section-label">education</div>
 
-  <!-- ==============================================================
-       RESUME VIEWER MODAL
-       ============================================================== -->
-  <div class="modal-backdrop" id="resume-modal">
-    <div class="modal-sheet" style="max-width: 900px; height: 90vh;">
-      <div class="modal-header">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <h3 style="font-size:1.15rem;">Ved Patel &mdash; Official Resume</h3>
-          <span class="badge badge-emerald">Single-Page PDF</span>
+      <div class="edu-item">
+        <div>
+          <h3 class="edu-title">B.Tech in Computer Engineering</h3>
+          <div class="edu-sub">Ganpat University &mdash; U.V. Patel College of Engineering &bull; 2023 &ndash; Present</div>
         </div>
-        <div style="display:flex; align-items:center; gap:8px;">
-          <a href="Ved_Patel_Resume.pdf" download="Ved_Patel_Resume.pdf" class="btn btn-sm btn-cyan">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download PDF
-          </a>
-          <button class="modal-close-btn" id="resume-close-btn" aria-label="Close modal">&times;</button>
+        <span class="edu-grade">CGPA: 7.26 / 10</span>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <span class="skill-category" style="display:block; margin-bottom:6px;">Certifications</span>
+        <span style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
+          Google Cloud Cybersecurity Certificate &bull; Cisco Introduction to Cybersecurity &bull; AICTE / Edunet LLMs (VOIS) &bull; Cloud Tech (IBM)
+        </span>
+      </div>
+    </section>
+
+    <!-- Contact & Direct Outro -->
+    <section class="contact-section" id="contact">
+      <div class="section-label">contact</div>
+      <p class="contact-text">
+        I am currently open to internship and full-time roles in <strong>DevOps, Cloud Infrastructure, or Backend Engineering</strong>. 
+        Feel free to reach out directly:
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:patelved5258@gmail.com" class="contact-link">patelved5258@gmail.com</a>
+        <a href="tel:+917383544236" class="contact-link">+91 7383544236</a>
+        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="contact-link">github</a>
+        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin</a>
+      </div>
+    </section>
+
+    <!-- Minimal Footer -->
+    <footer class="footer">
+      <span>Ved Patel &bull; Mehsana, Gujarat</span>
+      <button class="nav-resume-btn resume-trigger-btn" style="font-size:0.75rem;">view resume (pdf)</button>
+    </footer>
+
+  </main>
+
+  <!-- PDF Resume Modal -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-box">
+      <div class="modal-bar">
+        <span class="modal-title">Ved Patel &mdash; Resume (Single-Page PDF)</span>
+        <div class="modal-actions">
+          <a href="Ved_Patel_Resume.pdf" download="Ved_Patel_Resume.pdf" class="modal-download-btn">download pdf</a>
+          <button class="modal-close-btn" id="resume-close-btn">&times;</button>
         </div>
       </div>
-      <div style="flex-grow: 1; padding: 12px; background: #08080c; display: flex; flex-direction: column;">
-        <iframe src="Ved_Patel_Resume.pdf" style="width: 100%; height: 100%; border: none; border-radius: var(--radius-md);" title="Ved Patel Resume"></iframe>
+      <div class="modal-body">
+        <iframe src="Ved_Patel_Resume.pdf" title="Ved Patel Resume"></iframe>
       </div>
     </div>
   </div>
 
-  <!-- ==============================================================
-       COMMAND PALETTE (CMD+K / CTRL+K)
-       ============================================================== -->
-  <div class="modal-backdrop cmd-k-modal" id="cmd-k-modal">
-    <div class="modal-sheet">
-      <div class="cmd-k-input-wrapper">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="cmd-k-search" class="cmd-k-input" placeholder="Type a command or jump to section..." autocomplete="off">
-        <span class="badge" style="font-size:0.7rem; font-family:var(--font-mono);">ESC to close</span>
-      </div>
-      <ul class="cmd-k-list" id="cmd-k-list">
-        <!-- Rendered dynamically -->
-      </ul>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/js/audio.js"></script>
-  <script src="assets/js/spotlight.js"></script>
-  <script src="assets/js/terminal.js"></script>
+  <!-- Minimal JavaScript -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
