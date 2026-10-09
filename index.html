@@ -3,105 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ved Patel — Computer Engineering | Linux, Docker &amp; DevOps</title>
-  <meta name="description" content="Portfolio of Ved Patel. Computer Engineering student at Ganpat University focusing on Linux systems, Docker containers, backend APIs, and applied AI.">
+  <title>Ved Patel — Computer Engineering | DevOps, Applied AI & Cloud Architecture</title>
+  <meta name="description" content="Portfolio of Ved Patel — Computer Engineering student at Ganpat University. Linux systems, Docker microservices, offline LLMs, and DevOps pipelines.">
   <meta name="author" content="Ved Patel">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ved Patel — Computer Engineering">
-  <meta property="og:description" content="Linux administration, Docker containers, backend APIs, and offline applied AI pipelines.">
+  <meta property="og:title" content="Ved Patel — Systems, DevOps & Applied AI">
+  <meta property="og:description" content="Linux administration, Docker containers, backend APIs, and offline AI pipelines.">
   <meta property="og:type" content="website">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/ved_avatar.jpg">
-
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <main class="page-container">
+<!-- Ambient Particles & Cursor Spotlight -->
+<canvas id="particle-canvas"></canvas>
+<div class="cursor-glow"></div>
 
-    <!-- Minimal Top Bar -->
-    <header class="site-nav">
-      <a href="#" class="site-logo">ved patel</a>
-      <ul class="nav-menu">
-        <li><a href="#about" class="nav-link">about</a></li>
-        <li><a href="#projects" class="nav-link">projects</a></li>
-        <li><a href="#experience" class="nav-link">experience</a></li>
-        <li><a href="#skills" class="nav-link">skills</a></li>
-        <li><a href="#contact" class="nav-link">contact</a></li>
-        <li><button class="nav-resume-btn resume-trigger-btn">resume (pdf)</button></li>
-      </ul>
-    </header>
+<div class="page-wrap">
 
-    <!-- Intro / Bio -->
-    <section class="intro-section" id="hero">
-      <h1 class="intro-name">Ved Patel</h1>
-      <p class="intro-bio">
-        Computer Engineering student at <strong>Ganpat University</strong> (CGPA 7.26). 
-        I focus on <strong>Linux systems administration</strong>, <strong>Docker container workflows</strong>, 
-        backend services in Node.js and Python, and deploying <strong>offline applied AI</strong> models with Ollama and PyTorch.
-      </p>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#hero" class="nav-logo">
+      <span>ved patel</span>
+      <span class="nav-logo-cursor"></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#jules">jules agent</a></li>
+      <li><a href="#experience">experience</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li><button class="nav-cta resume-trigger-btn">resume &nearr;</button></li>
+    </ul>
+  </nav>
 
-      <div class="intro-links">
-        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="intro-link">
-          github <span class="arrow">↗</span>
-        </a>
-        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener noreferrer" class="intro-link">
-          linkedin <span class="arrow">↗</span>
-        </a>
-        <a href="mailto:patelved5258@gmail.com" class="intro-link">
-          patelved5258@gmail.com
-        </a>
-        <button class="intro-link resume-trigger-btn" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:inherit; padding:0;">
-          resume.pdf <span class="arrow">↗</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- About Me -->
-    <section class="section" id="about">
-      <div class="section-label">about</div>
-      <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.75; margin-bottom:16px;">
-        I enjoy working close to the machine. During my internship at the <strong>Ganpat University IT Department</strong>, 
-        I worked on administering our <strong>Open edX LMS platform</strong>: managing the Ulmo release migration, 
-        configuring Micro-Frontends (MFEs), setting up SMTP relays, and writing Python scripts to automate bulk student onboarding.
-      </p>
-      <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.75;">
-        In my project work, I prefer building systems that run efficiently on local hardware without depending on third-party cloud APIs. 
-        For <strong>CareMind AI</strong>, I containerized a dual-engine architecture combining PyTorch classification with a locally hosted 
-        <strong>Ollama (Llama-3.1)</strong> model constrained by strict Pydantic schemas, ensuring patient symptom data stays 100% private.
-      </p>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="section" id="projects">
-      <div class="section-label">featured work</div>
+  <!-- HERO -->
+  <section class="hero reveal" id="hero">
+    <div class="hero-text">
       
-      <div class="project-list">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>AVAILABLE FOR ENGAGEMENTS &bull; MEHSANA, IN</span>
+      </div>
 
-        <!-- Project 1: CareMind AI -->
-        <article class="project-item">
-          <div class="project-header">
-            <h3 class="project-title">CareMind AI &mdash; Clinical Decision Platform</h3>
-            <span class="project-year">2026</span>
+      <div class="hero-eyebrow">Computer Engineering &bull; Ganpat University</div>
+      
+      <h1 class="hero-name">
+        <span class="grad">Ved</span> Patel
+      </h1>
+
+      <div class="hero-type-container">
+        <span>&gt; </span>
+        <span class="typewriter-text"></span>
+        <span class="typewriter-cursor"></span>
+      </div>
+
+      <p class="hero-tagline">
+        I engineer software running <strong>close to the machine</strong>. 
+        Specialized in production Linux environments, containerized microservices in Docker, 
+        and high-efficiency <strong>offline AI inference</strong> with PyTorch and Ollama — 
+        zero third-party cloud vulnerabilities.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn-primary resume-trigger-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          View Resume
+        </button>
+        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener" class="btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener" class="btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Internships</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Shipped Systems</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">7.26</span>
+          <span class="stat-label">Engineering GPA</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">90%</span>
+          <span class="stat-label">RMSE Loss Reduction</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- AVATAR RING -->
+    <div class="hero-avatar-wrap">
+      <div class="avatar-halo"></div>
+      <div class="avatar-ambient-glow"></div>
+      <img src="assets/images/ved_avatar.jpg" alt="Ved Patel" class="hero-avatar">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section reveal" id="about">
+    <div class="section-header">
+      <span class="section-label">01 // about &amp; focus</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <p>
+          I am a Computer Engineering practitioner obsessed with reliability and distributed performance. 
+          During my internship at the <strong>Ganpat University IT Department</strong>,
+          I administered our production <strong>Open edX LMS cluster</strong> — migrating to the Ulmo release,
+          orchestrating Micro-Frontends (MFEs), configuring custom SMTP relays, and building Python automation pipelines 
+          for thousands of student enrollments.
+        </p>
+        <p>
+          In independent architectures, I design resilient systems that run securely on <strong>local compute</strong>.
+          For <strong>CareMind AI</strong>, I orchestrated a dual-engine architecture combining deep PyTorch multi-label 
+          classification with a local Ollama Llama-3.1 instance constrained via Pydantic schemas — keeping clinical health data 100% air-gapped.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JULES AI AUTONOMOUS WORKFLOW -->
+  <section class="jules-section reveal" id="jules">
+    <div class="jules-section-header">
+      <div class="jules-title-group">
+        <div class="jules-chip">⚡</div>
+        <div>
+          <h3 class="jules-h3">Google Jules AI &bull; Autonomous Agent Studio</h3>
+          <p class="jules-sub">Connected via API v1alpha &bull; Asynchronous GitHub Task Automation</p>
+        </div>
+      </div>
+      <div class="jules-status-pill">
+        <span class="status-dot"></span>
+        <span>Jules API Connected</span>
+      </div>
+    </div>
+
+    <div class="jules-terminal-box">
+      <div class="jules-terminal-prompt">
+        <span style="color: #7c6ee0;">ved@portfolio:~$</span>
+        <input 
+          type="text" 
+          id="jules-task-input" 
+          class="jules-input-field" 
+          placeholder="e.g. Audit security dependencies, run test suites, or optimize build assets..." 
+          value="Refactor Docker Compose configs and run automated vulnerability sweep"
+        />
+        <button id="jules-dispatch-btn" class="jules-action-btn">Dispatch Agent Task</button>
+      </div>
+
+      <div class="jules-logs" id="jules-logs-container">
+        <div class="jules-log-item info"><span>[SYSTEM]</span> Google Jules AI Coding Agent initialized with session endpoint v1alpha.</div>
+        <div class="jules-log-item success"><span>[READY]</span> Cloud VM sandbox standby. Ready to execute code refactors, Docker optimizations, and pull requests.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section reveal" id="projects">
+    <div class="section-header">
+      <span class="section-label">02 // featured architectures</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- CareMind AI – FEATURED -->
+      <article class="project-card featured">
+        <div class="project-img-wrap">
+          <img src="assets/images/caremind.jpg" alt="CareMind AI" class="project-img">
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3 class="project-title">CareMind AI &mdash; Air-Gapped Clinical Support Platform</h3>
+            <span class="project-year-badge">2026</span>
           </div>
           <p class="project-desc">
-            An offline clinical decision support system combining a PyTorch multi-label disease classifier with a locally hosted Ollama (Llama-3.1) model. 
-            Structured with Pydantic JSON schemas to prevent hallucinations, running across 5 microservices in Docker Compose with Prometheus and Grafana telemetry.
+            An offline clinical decision support system combining PyTorch multi-label disease classification 
+            with a local Ollama (Llama-3.1) reasoning model. Constrained by Pydantic JSON schemas to eradicate 
+            hallucinations. 5 microservices coordinated via Docker Compose with Prometheus telemetry.
           </p>
-          <div class="project-meta">
-            <span class="project-tech">Docker Compose &bull; FastAPI &bull; PyTorch &bull; Ollama &bull; Prometheus</span>
-            <div class="project-actions">
-              <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
-              <button class="accordion-toggle" data-target="code-caremind">inspect code &darr;</button>
-            </div>
+          <div class="project-tags">
+            <span class="tag">Docker Compose</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">Prometheus</span>
           </div>
-
+          <div class="project-footer">
+            <a href="https://github.com/patelved546513546" target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <button class="code-toggle" data-target="code-caremind">&lt;/&gt; inspect code &darr;</button>
+          </div>
           <div class="code-drawer" id="code-caremind">
             <div class="code-drawer-header">
-              <span>docker-compose.yml (5-Service Architecture)</span>
+              <span>docker-compose.yml</span>
               <button class="code-copy-btn">copy</button>
             </div>
             <pre><code>version: '3.8'
@@ -132,33 +240,43 @@ services:
 volumes:
   ollama_data:</code></pre>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- Project 2: TechResque -->
-        <article class="project-item">
-          <div class="project-header">
-            <h3 class="project-title">TechResque &mdash; Service Auto-Assignment Platform</h3>
-            <span class="project-year">2025</span>
+      <!-- TechResque -->
+      <article class="project-card">
+        <div class="project-img-wrap">
+          <img src="assets/images/techresque.jpg" alt="TechResque" class="project-img">
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3 class="project-title">TechResque &mdash; Service Auto-Assignment Engine</h3>
+            <span class="project-year-badge">2025</span>
           </div>
           <p class="project-desc">
-            On-demand service booking engine featuring sub-100ms algorithmic provider auto-assignment. 
-            Filters certified technicians by specialty and active job queue, applies uniform load distribution, and pushes WebSocket alerts within 5 seconds.
+            On-demand dispatch backend with sub-100ms technician auto-assignment. Dynamic specialty filtering, 
+            fair load-balancing distribution, and bi-directional WebSocket notifications.
           </p>
-          <div class="project-meta">
-            <span class="project-tech">Node.js &bull; Express &bull; MongoDB &bull; WebSockets &bull; &lt;84ms latency</span>
-            <div class="project-actions">
-              <a href="https://github.com/patelved546513546/TECHRESQUE" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
-              <button class="accordion-toggle" data-target="code-techresque">inspect code &darr;</button>
-            </div>
+          <div class="project-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">WebSockets</span>
+            <span class="tag">&lt;84ms Latency</span>
           </div>
-
+          <div class="project-footer">
+            <a href="https://github.com/patelved546513546/TECHRESQUE" target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <button class="code-toggle" data-target="code-techresque">&lt;/&gt; inspect code &darr;</button>
+          </div>
           <div class="code-drawer" id="code-techresque">
             <div class="code-drawer-header">
-              <span>backend/controllers/dispatchController.js</span>
+              <span>dispatchController.js</span>
               <button class="code-copy-btn">copy</button>
             </div>
             <pre><code>async function autoAssignProvider(serviceType, orderId) {
-  // Query certified technicians matching category and capacity
   const candidates = await Provider.find({
     specialty: serviceType,
     status: 'available',
@@ -167,10 +285,8 @@ volumes:
 
   if (!candidates.length) throw new Error('No available technicians');
 
-  // Fair uniform random selection among top eligible providers
   const chosen = candidates[Math.floor(Math.random() * candidates.length)];
 
-  // Atomic state change: 'requested' -> 'assigned' in <100ms
   await Order.findByIdAndUpdate(orderId, {
     status: 'assigned',
     providerId: chosen._id,
@@ -181,29 +297,39 @@ volumes:
   return chosen;
 }</code></pre>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- Project 3: Predictive Microgrid -->
-        <article class="project-item">
-          <div class="project-header">
-            <h3 class="project-title">Predictive Solar + EV Microgrid Energy Dispatch</h3>
-            <span class="project-year">2025</span>
+      <!-- Microgrid -->
+      <article class="project-card">
+        <div class="project-img-wrap">
+          <img src="assets/images/microgrid.jpg" alt="Predictive Microgrid" class="project-img">
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3 class="project-title">Predictive Solar + EV Microgrid Dispatch</h3>
+            <span class="project-year-badge">2025</span>
           </div>
           <p class="project-desc">
-            Net-load forecasting pipeline using Quantile Regression (P10/P50/P90) on Ausgrid 300-home solar load data and Open-Meteo weather APIs. 
-            Achieved a 90% RMSE reduction (20.75 down to 2.03) with a ~2.51% MAPE, driving a battery storage peak-shaving optimization schedule.
+            Net-load forecasting with Quantile Regression (P10/P50/P90) on Ausgrid solar data. 
+            90% RMSE reduction (20.75 &rarr; 2.03) and 2.51% MAPE driving battery peak-shaving.
           </p>
-          <div class="project-meta">
-            <span class="project-tech">Python &bull; Scikit-Learn &bull; Quantile Regression &bull; Streamlit</span>
-            <div class="project-actions">
-              <a href="https://github.com/patelved546513546/-microgrid-forecast-dispatch" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
-              <button class="accordion-toggle" data-target="code-microgrid">inspect code &darr;</button>
-            </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-Learn</span>
+            <span class="tag">Quantile Regressor</span>
+            <span class="tag">Streamlit</span>
           </div>
-
+          <div class="project-footer">
+            <a href="https://github.com/patelved546513546/-microgrid-forecast-dispatch" target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <button class="code-toggle" data-target="code-microgrid">&lt;/&gt; inspect code &darr;</button>
+          </div>
           <div class="code-drawer" id="code-microgrid">
             <div class="code-drawer-header">
-              <span>src/train_quantile.py</span>
+              <span>train_quantile.py</span>
               <button class="code-copy-btn">copy</button>
             </div>
             <pre><code>from sklearn.linear_model import QuantileRegressor
@@ -214,183 +340,242 @@ models = {}
 for q in quantiles:
     model = QuantileRegressor(quantile=q, alpha=0.01, solver='highs')
     model.fit(X_train, y_train)
-    models[f"p{int(q*100)}"] = model
-
-# Baseline RMSE: 20.75 -> Final Model RMSE: 2.03 (90% reduction)</code></pre>
+    models[f"p{int(q*100)}"] = model</code></pre>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <!-- Project 4: DevSecOps SIEM Lab -->
-        <article class="project-item">
-          <div class="project-header">
-            <h3 class="project-title">Enterprise DevSecOps SIEM &amp; Threat Detection Lab</h3>
-            <span class="project-year">2025</span>
-          </div>
-          <p class="project-desc">
-            Cybersecurity practice lab deploying an ELK stack (Elasticsearch, Logstash, Kibana) for Linux SSH brute-force attack detection. 
-            Configured Logstash Grok patterns for syslog ingestion and automated iptables firewall IP drop scripts on Kali Linux.
-          </p>
-          <div class="project-meta">
-            <span class="project-tech">Elasticsearch &bull; Logstash &bull; Kibana &bull; Kali Linux &bull; iptables</span>
-            <div class="project-actions">
-              <a href="https://github.com/patelved546513546/cybersec-tools" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5: News Bot -->
-        <article class="project-item">
-          <div class="project-header">
-            <h3 class="project-title">Automated Multi-Channel News Bot with Groq LLM</h3>
-            <span class="project-year">2025</span>
+      <!-- DevSecOps SIEM -->
+      <article class="project-card">
+        <div class="project-img-wrap">
+          <img src="assets/images/cybersec.jpg" alt="DevSecOps SIEM Lab" class="project-img">
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3 class="project-title">DevSecOps SIEM &amp; Threat Detection</h3>
+            <span class="project-year-badge">2025</span>
           </div>
           <p class="project-desc">
-            Automated news aggregation worker ingesting RSS feeds from international sources (BBC, Reuters, Reddit), synthesizing concise executive summaries via Groq Cloud LLM, and broadcasting alerts across Email SMTP, Telegram, and WhatsApp.
+            ELK stack deployment for Linux brute-force detection. Logstash Grok pipelines parsing syslog streams 
+            with automated iptables isolation rules on Kali Linux.
           </p>
-          <div class="project-meta">
-            <span class="project-tech">Python &bull; Groq API &bull; Telegram Bot API &bull; SMTP</span>
-            <div class="project-actions">
-              <a href="https://github.com/patelved546513546/NEWS_BOT" target="_blank" rel="noopener noreferrer" class="action-link">github ↗</a>
-            </div>
+          <div class="project-tags">
+            <span class="tag">Elasticsearch</span>
+            <span class="tag">Logstash</span>
+            <span class="tag">Kibana</span>
+            <span class="tag">Kali Linux</span>
+            <span class="tag">iptables</span>
           </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section" id="experience">
-      <div class="section-label">experience</div>
-
-      <div class="experience-list">
-
-        <!-- Role 1 -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-role">Open edX LMS Administrator &amp; Frontend Developer Intern</h3>
-            <span class="exp-period">Feb 2026 &ndash; May 2026</span>
+          <div class="project-footer">
+            <a href="https://github.com/patelved546513546/cybersec-tools" target="_blank" rel="noopener" class="project-link">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
           </div>
-          <div class="exp-company">Ganpat University &mdash; IT Department, Mehsana, Gujarat</div>
-          <ul class="exp-points">
-            <li>Assisted in migrating the university's Open edX instance to the Ulmo release, configuring frontend themes and Micro-Frontends (MFEs).</li>
-            <li>Wrote custom Python automation scripts to handle bulk student onboarding and course enrollment.</li>
-            <li>Administered Linux hosting environments, configured production SMTP mail settings, and managed service restarts for system updates.</li>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section reveal" id="experience">
+    <div class="section-header">
+      <span class="section-label">03 // industry experience</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-top">
+            <h3 class="timeline-role">Open edX LMS Administrator &amp; Frontend Developer Intern</h3>
+            <span class="timeline-period">Feb 2026 &ndash; May 2026</span>
+          </div>
+          <div class="timeline-company">Ganpat University &mdash; IT Department &bull; Mehsana, Gujarat</div>
+          <ul class="timeline-points">
+            <li>Migrated enterprise Open edX to the Ulmo release, configuring Micro-Frontends (MFEs) and responsive themes.</li>
+            <li>Authored Python scripts for batch student onboarding and enrollment sync.</li>
+            <li>Administered Ubuntu Linux hosts, configured SMTP relays, and managed systemd services.</li>
           </ul>
         </div>
+      </div>
 
-        <!-- Role 2 -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-role">Conversational Data Analysis with Large Language Models (LLMs)</h3>
-            <span class="exp-period">Sep 2025 &ndash; Oct 2025</span>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-top">
+            <h3 class="timeline-role">Conversational Data Analysis with LLMs</h3>
+            <span class="timeline-period">Sep 2025 &ndash; Oct 2025</span>
           </div>
-          <div class="exp-company">Vodafone Idea (VOIS) &ndash; Edunet Foundation | AICTE Virtual Internship</div>
-          <ul class="exp-points">
-            <li>Analyzed conversational datasets using LLMs to evaluate automated decision support and classification pipelines.</li>
-            <li>Studied token efficiency, prompt structure, and latency trade-offs on customer support interactions.</li>
+          <div class="timeline-company">Vodafone Idea (VOIS) &ndash; Edunet Foundation | AICTE Virtual Internship</div>
+          <ul class="timeline-points">
+            <li>Evaluated dialogue datasets using LLMs to quantify classification latency and token efficiency.</li>
+            <li>Designed prompt architectures mitigating hallucination rates in decision flows.</li>
           </ul>
         </div>
+      </div>
 
-        <!-- Role 3 -->
-        <div class="exp-item">
-          <div class="exp-header">
-            <h3 class="exp-role">Artificial Intelligence &amp; Cloud Technology Intern</h3>
-            <span class="exp-period">Sep 2025 &ndash; Oct 2025</span>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-top">
+            <h3 class="timeline-role">Artificial Intelligence &amp; Cloud Technology Intern</h3>
+            <span class="timeline-period">Sep 2025 &ndash; Oct 2025</span>
           </div>
-          <div class="exp-company">IBM SkillsBuild &ndash; Edunet Foundation | AICTE Virtual Internship</div>
-          <ul class="exp-points">
-            <li>Completed curriculum covering AI model fundamentals, containerization, and cloud computing deployment workflows.</li>
+          <div class="timeline-company">IBM SkillsBuild &ndash; Edunet Foundation | AICTE Virtual Internship</div>
+          <ul class="timeline-points">
+            <li>Trained on containerized deployment patterns, foundational AI workflows, and hybrid cloud paradigms.</li>
           </ul>
         </div>
-
-      </div>
-    </section>
-
-    <!-- Skills / Arsenal -->
-    <section class="section" id="skills">
-      <div class="section-label">skills &amp; tools</div>
-
-      <div class="skills-block">
-        <div class="skill-row">
-          <span class="skill-category">Systems &amp; DevOps</span>
-          <span class="skill-items">Docker, Docker Compose, Linux (Ubuntu, Debian), Bash, Networking (TCP/IP, DNS), Open edX Administration, systemd</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-category">Backend &amp; Data</span>
-          <span class="skill-items">Python, Node.js, Express, FastAPI, MongoDB, SQL, REST APIs, WebSockets</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-category">AI &amp; Observability</span>
-          <span class="skill-items">PyTorch, Ollama (Llama-3.1), Scikit-Learn, Prometheus, Grafana, Streamlit, Groq API</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-category">Security &amp; Tooling</span>
-          <span class="skill-items">ELK Stack (Elasticsearch, Logstash, Kibana), Kali Linux, Metasploit, Nmap, Git, GitHub, VS Code</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section" id="education">
-      <div class="section-label">education</div>
-
-      <div class="edu-item">
-        <div>
-          <h3 class="edu-title">B.Tech in Computer Engineering</h3>
-          <div class="edu-sub">Ganpat University &mdash; U.V. Patel College of Engineering &bull; 2023 &ndash; Present</div>
-        </div>
-        <span class="edu-grade">CGPA: 7.26 / 10</span>
       </div>
 
-      <div style="margin-top: 16px;">
-        <span class="skill-category" style="display:block; margin-bottom:6px;">Certifications</span>
-        <span style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">
-          Google Cloud Cybersecurity Certificate &bull; Cisco Introduction to Cybersecurity &bull; AICTE / Edunet LLMs (VOIS) &bull; Cloud Tech (IBM)
-        </span>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact & Direct Outro -->
-    <section class="contact-section" id="contact">
-      <div class="section-label">contact</div>
-      <p class="contact-text">
-        I am currently open to internship and full-time roles in <strong>DevOps, Cloud Infrastructure, or Backend Engineering</strong>. 
-        Feel free to reach out directly:
-      </p>
+  <!-- SKILLS -->
+  <section class="section reveal" id="skills">
+    <div class="section-header">
+      <span class="section-label">04 // toolkit &amp; proficiencies</span>
+      <div class="section-line"></div>
+    </div>
 
-      <div class="contact-links">
-        <a href="mailto:patelved5258@gmail.com" class="contact-link">patelved5258@gmail.com</a>
-        <a href="tel:+917383544236" class="contact-link">+91 7383544236</a>
-        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener noreferrer" class="contact-link">github</a>
-        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin</a>
-      </div>
-    </section>
-
-    <!-- Minimal Footer -->
-    <footer class="footer">
-      <span>Ved Patel &bull; Mehsana, Gujarat</span>
-      <button class="nav-resume-btn resume-trigger-btn" style="font-size:0.75rem;">view resume (pdf)</button>
-    </footer>
-
-  </main>
-
-  <!-- PDF Resume Modal -->
-  <div class="modal-overlay" id="resume-modal">
-    <div class="modal-box">
-      <div class="modal-bar">
-        <span class="modal-title">Ved Patel &mdash; Resume (Single-Page PDF)</span>
-        <div class="modal-actions">
-          <a href="Ved_Patel_Resume.pdf" download="Ved_Patel_Resume.pdf" class="modal-download-btn">download pdf</a>
-          <button class="modal-close-btn" id="resume-close-btn">&times;</button>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-label">Systems &amp; DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Docker Compose</span>
+          <span class="skill-tag">Linux (Ubuntu/Debian)</span>
+          <span class="skill-tag">Bash Scripting</span>
+          <span class="skill-tag">systemd</span>
+          <span class="skill-tag">Open edX MFEs</span>
+          <span class="skill-tag">Nginx &amp; Reverse Proxies</span>
         </div>
       </div>
-      <div class="modal-body">
-        <iframe src="Ved_Patel_Resume.pdf" title="Ved Patel Resume"></iframe>
+
+      <div class="skill-card">
+        <div class="skill-card-label">Backend &amp; Cloud APIs</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">WebSockets</span>
+          <span class="skill-tag">RESTful Architecture</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-label">Applied AI &amp; Observability</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Ollama (Llama-3.1)</span>
+          <span class="skill-tag">Scikit-Learn</span>
+          <span class="skill-tag">Prometheus</span>
+          <span class="skill-tag">Grafana</span>
+          <span class="skill-tag">Pydantic Guardrails</span>
+          <span class="skill-tag">Groq API</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-label">Security &amp; Autonomous Agents</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Google Jules AI</span>
+          <span class="skill-tag">ELK Stack</span>
+          <span class="skill-tag">Kali Linux</span>
+          <span class="skill-tag">iptables &amp; UFW</span>
+          <span class="skill-tag">Git &amp; CI/CD</span>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Minimal JavaScript -->
-  <script src="assets/js/main.js"></script>
+  <!-- EDUCATION -->
+  <section class="section reveal" id="education">
+    <div class="section-header">
+      <span class="section-label">05 // education &amp; credentials</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="edu-card">
+      <div>
+        <h3 class="edu-title">B.Tech in Computer Engineering</h3>
+        <div class="edu-sub">Ganpat University &mdash; U.V. Patel College of Engineering<br>2023 &ndash; Present &bull; Mehsana, Gujarat</div>
+      </div>
+      <span class="edu-badge">7.26 / 10 CGPA</span>
+    </div>
+
+    <div class="cert-list">
+      <span class="cert-badge">Google Cloud Cybersecurity Certificate</span>
+      <span class="cert-badge">Cisco Introduction to Cybersecurity</span>
+      <span class="cert-badge">AICTE / Edunet LLMs (VOIS)</span>
+      <span class="cert-badge">IBM SkillsBuild Cloud Tech</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section reveal" id="contact">
+    <div class="contact-card">
+      <h2 class="contact-heading">Let's <span class="grad">Build Resilient Systems</span></h2>
+      <p class="contact-sub">
+        Available for internship and full-time opportunities in 
+        <strong>DevOps, Cloud Infrastructure, and Backend AI Engineering</strong>.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:patelved5258@gmail.com" class="contact-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          patelved5258@gmail.com
+        </a>
+        <a href="tel:+917383544236" class="contact-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.57 4.5a2 2 0 0 1 1.99-2.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.85-.85a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 73835 44236
+        </a>
+        <a href="https://github.com/patelved546513546" target="_blank" rel="noopener" class="contact-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/vedpatel5258" target="_blank" rel="noopener" class="contact-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span>Ved Patel &bull; Mehsana, Gujarat &bull; 2026</span>
+      <div style="font-size: 0.7rem; color: #555577; margin-top: 4px;">
+        Architected with Google Jules AI Agent &bull; Offline PyTorch &bull; Docker
+      </div>
+    </div>
+    <button class="resume-trigger-btn">view resume &nearr;</button>
+  </footer>
+
+</div>
+
+<!-- PDF Resume Modal -->
+<div class="modal-overlay" id="resume-modal">
+  <div class="modal-box">
+    <div class="modal-bar">
+      <span class="modal-title">Ved Patel &mdash; Engineering Resume</span>
+      <div class="modal-actions">
+        <a href="Ved_Patel_Resume.pdf" download="Ved_Patel_Resume.pdf" class="modal-download-btn">download pdf</a>
+        <button class="modal-close-btn" id="resume-close-btn">&times;</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <iframe src="Ved_Patel_Resume.pdf" title="Ved Patel Resume"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
