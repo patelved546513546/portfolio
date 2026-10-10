@@ -20,7 +20,7 @@
 
   --text:          #f2f2fa;
   --text-muted:    #9494b2;
-  --text-faint:    #555577;
+  --text-faint:    #7a7a99;
 
   --purple:        #7c6ee0;
   --purple-light:  #a394f0;
@@ -1152,3 +1152,4 @@ a { color: inherit; text-decoration: none; }
   .timeline-dot { display: none; }
   .footer { flex-direction: column; gap: 12px; text-align: center; }
 }
+@media (max-width: 768px) { .jules-terminal-prompt { flex-direction: column; align-items: stretch; } .jules-section { padding: 24px 20px; } }
